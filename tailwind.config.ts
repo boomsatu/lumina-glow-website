@@ -63,16 +63,16 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         lumina: {
-          50: '#E6F3FF',
-          100: '#CCE7FF',
-          200: '#99CFFF',
-          300: '#66B7FF',
-          400: '#339FFF',
-          500: '#0087FF',
-          600: '#006ACC',
-          700: '#004D99',
+          50: '#EBF5FF',
+          100: '#CCE5FF',
+          200: '#99CCFF',
+          300: '#66B2FF',
+          400: '#3399FF',
+          500: '#0080FF',
+          600: '#0066CC',
+          700: '#004C99',
           800: '#003366',
-          900: '#001A33',
+          900: '#0A1628',
         },
       },
       borderRadius: {
@@ -123,8 +123,8 @@ export default {
         'float': 'float 6s ease-in-out infinite'
       },
       backgroundImage: {
-        'lumina-gradient': 'linear-gradient(90deg, #001A33 0%, #003366 100%)',
-        'star-pattern': 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
+        'lumina-gradient': 'linear-gradient(90deg, #0A1628 0%, #1E3A8A 100%)',
+        'star-pattern': 'radial-gradient(circle, #3B82F6 1px, transparent 1px)',
       }
     }
   },

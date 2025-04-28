@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 45 100% 98%;
-    --foreground: 220 10% 10%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 220 10% 10%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 10%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
     
-    --primary: 40 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
     
-    --secondary: 30 100% 96%;
-    --secondary-foreground: 30 10% 30%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
     
-    --muted: 45 30% 96%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
     
-    --accent: 25 100% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 40% 98%;
     
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     
-    --border: 30 30% 90%;
-    --input: 30 30% 90%;
-    --ring: 40 100% 50%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 76% 48%;
     
     --radius: 0.5rem;
   }
@@ -47,10 +47,10 @@
 }
 
 .hero-pattern {
-  background-color: #001A33;
+  background-color: #0A1628;
   background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(to right, rgba(0, 51, 102, 0.1), rgba(0, 26, 51, 0.1));
+    radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
+    linear-gradient(to right, rgba(30, 58, 138, 0.1), rgba(10, 22, 40, 0.1));
   background-size: 25px 25px, 100% 100%;
   position: relative;
   overflow: hidden;
@@ -63,7 +63,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 51, 102, 0.1) 0%, rgba(0, 26, 51, 0.1) 100%);
+  background: linear-gradient(45deg, rgba(30, 58, 138, 0.1) 0%, rgba(10, 22, 40, 0.1) 100%);
   mask-image: radial-gradient(circle at center, transparent 0%, black 100%);
   animation: pulse 4s ease-in-out infinite;
 }
@@ -87,15 +87,15 @@
 }
 
 .glass-effect {
-  background: rgba(0, 51, 102, 0.1);
+  background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 .neon-glow {
-  box-shadow: 0 0 15px rgba(0, 135, 255, 0.3),
-              0 0 30px rgba(0, 135, 255, 0.2),
-              0 0 45px rgba(0, 135, 255, 0.1);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3),
+              0 0 30px rgba(59, 130, 246, 0.2),
+              0 0 45px rgba(59, 130, 246, 0.1);
 }
 
 @layer utilities {

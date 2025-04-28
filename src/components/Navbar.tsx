@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
@@ -7,7 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center">
@@ -27,7 +26,7 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-lumina-500 hover:bg-lumina-600 text-white">
+            <Button className="bg-accent hover:bg-accent/90 text-white">
               Join Presale
             </Button>
           </div>
@@ -40,9 +39,8 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-background border-t border-border">
           <div className="container mx-auto px-4 py-3 space-y-3">
             <a href="#about" className="block py-2 text-foreground/80 hover:text-foreground">
               About
@@ -56,7 +54,7 @@ const Navbar = () => {
             <a href="#community" className="block py-2 text-foreground/80 hover:text-foreground">
               Community
             </a>
-            <Button className="w-full bg-lumina-500 hover:bg-lumina-600 text-white">
+            <Button className="w-full bg-accent hover:bg-accent/90 text-white">
               Join Presale
             </Button>
           </div>
