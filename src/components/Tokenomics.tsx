@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const tokenDistribution = [
   { name: 'Presale', value: 40, color: '#FFB347' },
@@ -25,13 +26,15 @@ const CustomTooltip = ({ active, payload }: any) => {
 };
 
 const Tokenomics = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="tokenomics" className="py-16 md:py-24 bg-lumina-50/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tokenomics</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('tokenomics', 'title')}</h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Lumina Token (LMN) has a total supply of 100 billion tokens, carefully allocated to ensure sustainable growth and development.
+            {t('tokenomics', 'subtitle')}
           </p>
         </div>
 
@@ -39,22 +42,22 @@ const Tokenomics = () => {
           <div>
             <Card className="mb-8 border-lumina-100 shadow-sm">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Token Details</h3>
+                <h3 className="text-xl font-semibold mb-4">{t('tokenomics', 'token_details.title')}</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="text-foreground/70">Token Name:</div>
+                    <div className="text-foreground/70">{t('tokenomics', 'token_details.name')}:</div>
                     <div className="font-medium">Lumina Token</div>
                     
-                    <div className="text-foreground/70">Token Symbol:</div>
+                    <div className="text-foreground/70">{t('tokenomics', 'token_details.symbol')}:</div>
                     <div className="font-medium">LMN</div>
                     
-                    <div className="text-foreground/70">Total Supply:</div>
+                    <div className="text-foreground/70">{t('tokenomics', 'token_details.supply')}:</div>
                     <div className="font-medium">100,000,000,000 LMN</div>
                     
-                    <div className="text-foreground/70">Token Type:</div>
+                    <div className="text-foreground/70">{t('tokenomics', 'token_details.type')}:</div>
                     <div className="font-medium">Native</div>
                     
-                    <div className="text-foreground/70">Initial Price:</div>
+                    <div className="text-foreground/70">{t('tokenomics', 'token_details.price')}:</div>
                     <div className="font-medium">$0.0025 USD</div>
                   </div>
                 </div>
@@ -77,7 +80,7 @@ const Tokenomics = () => {
           </div>
           
           <div className="h-[400px] bg-white rounded-xl shadow-sm p-6 border border-lumina-100">
-            <h3 className="text-xl font-semibold mb-4 text-center">Token Distribution</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center">{t('tokenomics', 'token_details.title')}</h3>
             <ResponsiveContainer width="100%" height="90%">
               <PieChart>
                 <Pie
@@ -103,25 +106,25 @@ const Tokenomics = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card className="border-lumina-100 shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Presale Information</h3>
+              <h3 className="text-xl font-semibold mb-3">{t('tokenomics', 'presale.title')}</h3>
               <p className="text-foreground/70 mb-4">
-                40% of the total supply (40 billion LMN) will be available during presale phases, ensuring wide distribution.
+                {t('tokenomics', 'presale.description')}
               </p>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Phase 1 Price:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'presale.phase1')}:</span>
                   <span>$0.0025</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Phase 2 Price:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'presale.phase2')}:</span>
                   <span>$0.0035</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Phase 3 Price:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'presale.phase3')}:</span>
                   <span>$0.0050</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Launch Price:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'presale.launch')}:</span>
                   <span>$0.0065</span>
                 </div>
               </div>
@@ -130,21 +133,21 @@ const Tokenomics = () => {
           
           <Card className="border-lumina-100 shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Liquidity Allocation</h3>
+              <h3 className="text-xl font-semibold mb-3">{t('tokenomics', 'liquidity.title')}</h3>
               <p className="text-foreground/70 mb-4">
-                20% of tokens (20 billion LMN) will be allocated to liquidity pools to ensure trading stability and reduce slippage.
+                {t('tokenomics', 'liquidity.description')}
               </p>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Initial Liquidity:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'liquidity.initial')}:</span>
                   <span>10%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Locked Period:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'liquidity.locked')}:</span>
                   <span>2 Years</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Release Schedule:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'liquidity.release')}:</span>
                   <span>Quarterly</span>
                 </div>
               </div>
@@ -153,21 +156,21 @@ const Tokenomics = () => {
           
           <Card className="border-lumina-100 shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-3">Team & Development</h3>
+              <h3 className="text-xl font-semibold mb-3">{t('tokenomics', 'team.title')}</h3>
               <p className="text-foreground/70 mb-4">
-                15% of tokens (15 billion LMN) allocated to the team, with a 1-year cliff and 3-year vesting period to ensure long-term commitment.
+                {t('tokenomics', 'team.description')}
               </p>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Cliff Period:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'team.cliff')}:</span>
                   <span>12 Months</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Vesting Period:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'team.vesting')}:</span>
                   <span>36 Months</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-foreground/80">Monthly Release:</span>
+                  <span className="text-foreground/80">{t('tokenomics', 'team.monthly')}:</span>
                   <span>2.78%</span>
                 </div>
               </div>

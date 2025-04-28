@@ -33,15 +33,15 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-6">
               <div className="flex items-center glass-effect px-4 py-2 rounded-full">
                 <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                <span className="text-foreground/70">Presale Live</span>
+                <span className="text-foreground/70">{t('hero', 'presaleLive')}</span>
               </div>
               <div className="flex items-center glass-effect px-4 py-2 rounded-full">
                 <div className="font-medium text-foreground/90">100B</div>
-                <span className="text-foreground/70 ml-2">Total Supply</span>
+                <span className="text-foreground/70 ml-2">{t('hero', 'totalSupply')}</span>
               </div>
               <div className="flex items-center glass-effect px-4 py-2 rounded-full">
                 <div className="font-medium text-foreground/90">24,352</div>
-                <span className="text-foreground/70 ml-2">Holders</span>
+                <span className="text-foreground/70 ml-2">{t('hero', 'holders')}</span>
               </div>
             </div>
           </div>
