@@ -7,32 +7,32 @@
   :root {
     --background: 45 100% 98%;
     --foreground: 220 10% 10%;
-
+    
     --card: 0 0% 100%;
     --card-foreground: 220 10% 10%;
-
+    
     --popover: 0 0% 100%;
     --popover-foreground: 220 10% 10%;
-
+    
     --primary: 40 100% 50%;
     --primary-foreground: 0 0% 100%;
-
+    
     --secondary: 30 100% 96%;
     --secondary-foreground: 30 10% 30%;
-
+    
     --muted: 45 30% 96%;
     --muted-foreground: 220 10% 40%;
-
+    
     --accent: 25 100% 60%;
     --accent-foreground: 0 0% 100%;
-
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
+    
     --border: 30 30% 90%;
     --input: 30 30% 90%;
     --ring: 40 100% 50%;
-
+    
     --radius: 0.5rem;
   }
 }
@@ -41,7 +41,7 @@
   * {
     @apply border-border;
   }
-
+  
   body {
     @apply bg-background text-foreground;
   }
@@ -49,12 +49,62 @@
 
 .hero-pattern {
   background-color: #FFE8CC;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.7) 1px, transparent 1px);
-  background-size: 25px 25px;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 175, 0, 0.1), rgba(255, 200, 0, 0.1));
+  background-size: 25px 25px, 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 175, 0, 0.1) 0%, rgba(255, 200, 0, 0.1) 100%);
+  mask-image: radial-gradient(circle at center, transparent 0%, black 100%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(255, 175, 0, 0.3),
+              0 0 30px rgba(255, 175, 0, 0.2),
+              0 0 45px rgba(255, 175, 0, 0.1);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 175, 0, 0.3);
   }
 }
